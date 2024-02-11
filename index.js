@@ -144,8 +144,8 @@ app.post("/api/shorturl", async function (req, res, next) {
     })
   } catch (err) {
     console.error("Error stack: ", err.stack)
-    return res.status(400).json({
-      error: "Invalid URL or internal server error"
+    return res.json({
+      error: "Invalid URL"
     })
   }
 })
